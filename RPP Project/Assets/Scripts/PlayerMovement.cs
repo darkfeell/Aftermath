@@ -7,11 +7,13 @@ public class PlayerMovement : MonoBehaviour
     public float movSpeed;
     public Rigidbody2D rb;
     private Vector2 movDirection;
+    private Vector2 mousePosition;
     public bool canDash = true;
     public bool isDashing;
     public float dashPower;
     public float dashTime;
     public float dashCooldown;
+    public Camera cam;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         float inputY = Input.GetAxisRaw("Vertical");
 
         movDirection = new Vector2(inputX, inputY).normalized;
+        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition); //rotação do player
 
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
@@ -37,6 +40,9 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
+        Vector2 lookDirection = mousePosition - movDirection;
+        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle; //rotação do player
         if (isDashing)
         {
             return;
