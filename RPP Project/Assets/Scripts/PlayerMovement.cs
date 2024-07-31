@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float movSpeed;
     public Rigidbody2D rb;
     private Vector2 movDirection;
-    private Vector2 mousePosition;
+    private Vector3 mousePosition;
     public bool canDash = true;
     public bool isDashing;
     public float dashPower;
@@ -40,8 +40,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Vector2 lookDirection = mousePosition - movDirection;
-        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
+        Vector2 lookDirection = mousePosition - transform.position;
+        float angle = (Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg) - 90f;
         rb.rotation = angle; //rotação do player
         if (isDashing)
         {
