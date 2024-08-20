@@ -23,6 +23,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            GameManager.instance.hp.TakeDamage();
+        }
+        
+        
+        
         if (isDashing)
         {
             return;
@@ -31,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         float inputY = Input.GetAxisRaw("Vertical");
 
         movDirection = new Vector2(inputX, inputY).normalized;
-        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition); //rotação do player
+        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition); //rotaï¿½ï¿½o do player
 
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
@@ -42,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 lookDirection = mousePosition - transform.position;
         float angle = (Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg) - 90f;
-        rb.rotation = angle; //rotação do player
+        rb.rotation = angle; //rotaï¿½ï¿½o do player
         if (isDashing)
         {
             return;

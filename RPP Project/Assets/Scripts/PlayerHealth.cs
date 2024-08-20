@@ -17,23 +17,17 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (currentHealth <= maxHealth)
-        {
-            TakeDamage();
-            
-        }
-    }
+    
 
-    void TakeDamage()
+    public void TakeDamage()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            currentHealth -= damageTaken;
-            bar.SetHealth(currentHealth);
-            PlayerDeath();
-        }
+        currentHealth -= damageTaken;
+        bar.SetHealth(currentHealth);
+        PlayerDeath();
+       
+                 
+                 
+                 
         
     }
 

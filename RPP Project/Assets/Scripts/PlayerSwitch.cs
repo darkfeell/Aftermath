@@ -9,6 +9,8 @@ public class PlayerSwitch : MonoBehaviour
     public PlayerMovement player2;
     public PlayerShooting play1shoot;
     public PlayerShooting play2shoot;
+    public PlayerHealth play1health;
+    public PlayerHealth play2health;
 
     public bool player1active = true;
     // Start is called before the first frame update
@@ -35,6 +37,8 @@ public class PlayerSwitch : MonoBehaviour
             player1active = false;
             play1shoot.enabled = false;
             play2shoot.enabled = true;
+            play1health.enabled = false;
+            play2health.enabled = true;
 
         }
         else
@@ -44,6 +48,8 @@ public class PlayerSwitch : MonoBehaviour
             player1active = true;
             play1shoot.enabled = true;
             play2shoot.enabled = false;
+            play1health.enabled = true;
+            play2health.enabled = false;
         }
     }
 }

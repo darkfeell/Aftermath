@@ -6,13 +6,13 @@ using UnityEngine;
 public class MedKit : MonoBehaviour
 {
     
-    public PlayerHealth health;
+    //public PlayerHealth health;
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Player")
         {
             Debug.Log("colidiu");
-            health.PlayerHeal(10);
+            GameManager.instance.hp.PlayerHeal(10);
             Destroy(gameObject);
         }
         

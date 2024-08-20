@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6346450317976374790}
   - component: {fileID: 5607234930778422676}
   - component: {fileID: 5553437916423500870}
-  - component: {fileID: 6391191943720459434}
   m_Layer: 0
   m_Name: Rosalia
   m_TagString: Player
@@ -197,22 +196,6 @@ MonoBehaviour:
   firePoint: {fileID: 4341156042616752074}
   bulletPrefab: {fileID: 5300389345843971787, guid: 09222147640656d4e93a662d0139427c, type: 3}
   bulletForce: 20
---- !u!114 &6391191943720459434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 652974697575971374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17abfb2ef035a0c42811bcc3f37dd261, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  damageTaken: 10
-  bar: {fileID: 0}
 --- !u!1 &4299748839954148478
 GameObject:
   m_ObjectHideFlags: 0
