@@ -199,7 +199,6 @@ GameObject:
   - component: {fileID: 364352497}
   - component: {fileID: 364352496}
   - component: {fileID: 364352495}
-  - component: {fileID: 364352500}
   - component: {fileID: 364352499}
   - component: {fileID: 364352498}
   m_Layer: 0
@@ -268,8 +267,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 748ae8b33df036b46a86e0387f1602cf, type: 3}
-  m_Color: {r: 0.8962264, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f469f8253737d534ca7809ae6f0d2422, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -329,35 +328,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364352494}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c66606d54955b5c4aa1dfa889b7e5dfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 760835637}
-  shootingRange: 13
-  projectilePrefab: {fileID: 4166594522726558184, guid: c22b28abcb480f447b1f18c147b1db65, type: 3}
-  shootPoint: {fileID: 683825652}
-  fireRate: 1
-  nextFireTime: 0
---- !u!114 &364352500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364352494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b31309d09b24584493b029f5038e78c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7782eca61143d7a4c8c4aa7a1a931e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 760835637}
-  shootingRange: 13
-  projectilePrefab: {fileID: 4166594522726558184, guid: c22b28abcb480f447b1f18c147b1db65, type: 3}
-  shootPoint: {fileID: 683825652}
-  fireRate: 1
-  nextFireTime: 0
+  EnemyLife: 2
 --- !u!1 &518330750
 GameObject:
   m_ObjectHideFlags: 0
