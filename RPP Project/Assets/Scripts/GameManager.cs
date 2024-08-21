@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public PlayerHealth hp;
 
+
     private void Awake()
     {
         instance = this;

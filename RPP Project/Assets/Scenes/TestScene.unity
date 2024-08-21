@@ -1084,6 +1084,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5553437916423500870, guid: 61a5dc1ad881a244fa2277c467d9bbfe, type: 3}
+      propertyPath: maxAmmo
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553437916423500870, guid: 61a5dc1ad881a244fa2277c467d9bbfe, type: 3}
+      propertyPath: reloadTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5607234930778422676, guid: 61a5dc1ad881a244fa2277c467d9bbfe, type: 3}
       propertyPath: cam
       value: 
