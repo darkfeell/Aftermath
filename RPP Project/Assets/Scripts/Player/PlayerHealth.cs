@@ -8,6 +8,10 @@ public class PlayerHealth : MonoBehaviour
     public int damageTaken;
     //public int healAmount;
     public HealthBar bar;
+    public GameObject player;
+    public SpriteRenderer sprite;
+    public PlayerMovement mov;
+    public PlayerShooting shoot;
     
     // Start is called before the first frame update
     void Start()
@@ -23,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damageTaken;
         bar.SetHealth(currentHealth);
-        PlayerDeath();
+        //PlayerDeath();
        
                  
                  
@@ -31,12 +35,16 @@ public class PlayerHealth : MonoBehaviour
         
     }
 
-    void PlayerDeath()
+    public IEnumerator PlayerDeath()
     {
-        if (currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
+        currentHealth = 0;
+        bar.SetHealth(currentHealth);
+        sprite.color = Color.red;
+        shoot.enabled = false;
+        mov.enabled = false;
+        mov.rb.velocity = Vector2.zero;
+        yield return new WaitForSeconds(3f);
+        Destroy(player);
     }
 
     public void PlayerHeal(int healAmount)
