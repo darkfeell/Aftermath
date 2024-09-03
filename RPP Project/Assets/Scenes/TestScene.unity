@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 355476461}
   - component: {fileID: 355476460}
   - component: {fileID: 355476462}
+  - component: {fileID: 355476463}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -242,6 +243,19 @@ MonoBehaviour:
   play1health: {fileID: 355476460}
   play2health: {fileID: 0}
   player1active: 1
+--- !u!114 &355476463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355476458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0b2b38b35ff484aa4945e25f4bdb99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 1058688106659159057, guid: 1d2b82504de77b949b03ab2578ac5206, type: 3}
 --- !u!1001 &426771519
 PrefabInstance:
   m_ObjectHideFlags: 0

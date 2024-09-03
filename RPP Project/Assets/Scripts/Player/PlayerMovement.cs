@@ -65,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         canDash = false;
         isDashing = true;
         rb.velocity = new Vector2(movDirection.x * dashPower, movDirection.y * dashPower);
+        ParticleObserver.OnParticleSpawnEvent(transform.position);
         yield return new WaitForSeconds(dashTime);
         isDashing = false;
         yield return new WaitForSeconds(dashCooldown);
