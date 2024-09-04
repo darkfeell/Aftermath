@@ -1,29 +1,22 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
+    public static AudioManager instance;
 
-    public static GameManager instance;
+    public AudioSource musicSource, sfxSource;
 
-    public PlayerHealth hp;
-
-
-    private void Awake()
+    public AudioClip dashClip, colectableClip;
+    // Start is called before the first frame update
+    void Awake()
     {
         if(instance == null){
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else Destroy(gameObject);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        TryGetComponent(out hp);
     }
 
     // Update is called once per frame
