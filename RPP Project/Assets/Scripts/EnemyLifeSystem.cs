@@ -28,7 +28,7 @@ public class EnemyLifeSystem : MonoBehaviour
         if (collider.gameObject.tag == "pbullet")
         {
             EnemyLife--;
-            gameObj.GetComponent<Renderer>().material.color = new Color(0, 0, 50);
+            gameObj.GetComponent<Renderer>().material.color = new Color(0, 2,2);
 
         }
 

@@ -1,31 +1,30 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyPatrol2D : MonoBehaviour
 {
     public Transform player;
-    public float detectionRange ;
+    public float detectionRange;
     public float patrolSpeed = 2f;
     public float chaseSpeed = 4f;
     public Vector2[] patrolPoints;
+
     private int currentPatrolIndex;
     private Rigidbody2D rb;
-
+    private EnemyAttack enemyAttack;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         currentPatrolIndex = 0;
+
+        // Referência ao script de ataque
+        enemyAttack = GetComponent<EnemyAttack>();
     }
 
     private void Update()
     {
-
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         Debug.Log("Detection Range: " + distanceToPlayer);
-
 
         if (distanceToPlayer <= detectionRange)
         {
@@ -35,6 +34,9 @@ public class EnemyPatrol2D : MonoBehaviour
         {
             Patrol();
         }
+
+        // Chama a função de ataque
+        enemyAttack.Tattack(player, distanceToPlayer);
     }
 
     private void Patrol()
@@ -42,7 +44,7 @@ public class EnemyPatrol2D : MonoBehaviour
         Vector2 targetPosition = patrolPoints[currentPatrolIndex];
         MoveTowards(targetPosition, patrolSpeed);
 
-        if (Vector2.Distance(transform.position, targetPosition) < 0.2f)
+        if (Vector2.Distance(rb.position, targetPosition) < 0.2f)
         {
             currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
         }
@@ -58,5 +60,4 @@ public class EnemyPatrol2D : MonoBehaviour
         Vector2 direction = (targetPosition - rb.position).normalized;
         rb.velocity = direction * speed;
     }
-
 }
