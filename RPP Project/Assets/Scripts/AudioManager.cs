@@ -24,4 +24,14 @@ public class AudioManager : MonoBehaviour
     {
         
     }
+
+    void PlaySfx(string clipName)
+    {
+        switch (clipName)
+        {
+            case "dash":
+                sfxSource.PlayOneShot(dashClip);
+                break;
+        }
+    }
 }

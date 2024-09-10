@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class AudioObserver : MonoBehaviour
+public static class AudioObserver 
 {
-    // Start is called before the first frame update
-    void Start()
+    public static event Action<string> PlaySFXEvent;
+
+    public static event Action PlayMusicEvent;
+    public static event Action StopMusicEvent;
+
+    public static void OnPlaySFXEvent(string obj)
     {
-        
+        PlaySFXEvent?.Invoke(obj);
+    }
+    public static void OnPlayMusicEvent()
+    {
+        PlayMusicEvent?.Invoke();
+    }
+    public static void OnStopMusicEvent()
+    {
+        StopMusicEvent?.Invoke();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
