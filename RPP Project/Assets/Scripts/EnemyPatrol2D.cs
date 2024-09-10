@@ -4,8 +4,10 @@ public class EnemyPatrol2D : MonoBehaviour
 {
     public Transform player;
     public float detectionRange;
+    public float detectionFlee;
     public float patrolSpeed = 2f;
     public float chaseSpeed = 4f;
+    public float fleeSpeed;
     public Vector2[] patrolPoints;
 
     private int currentPatrolIndex;
@@ -26,10 +28,19 @@ public class EnemyPatrol2D : MonoBehaviour
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         Debug.Log("Detection Range: " + distanceToPlayer);
 
-        if (distanceToPlayer <= detectionRange)
+        if (distanceToPlayer <= detectionRange && distanceToPlayer > detectionFlee)
         {
             ChasePlayer();
+            if (distanceToPlayer <= detectionFlee)
+            {
+
+            }
+            else
+            {
+                ChasePlayer();
+            }
         }
+
         else
         {
             Patrol();

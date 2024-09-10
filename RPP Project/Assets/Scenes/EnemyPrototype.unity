@@ -393,9 +393,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 557105659466920665, guid: c4c34ac56fe3181438107f82fa86abb1, type: 3}
+      propertyPath: detectionFlee
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 557105659466920665, guid: c4c34ac56fe3181438107f82fa86abb1, type: 3}
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 4166594522726558184, guid: c22b28abcb480f447b1f18c147b1db65, type: 3}
+    - target: {fileID: 1110092045034248602, guid: c4c34ac56fe3181438107f82fa86abb1, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 1110092045034248602, guid: c4c34ac56fe3181438107f82fa86abb1, type: 3}
       propertyPath: m_Constraints
       value: 4
