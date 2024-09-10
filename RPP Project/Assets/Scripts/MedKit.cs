@@ -13,6 +13,7 @@ public class MedKit : MonoBehaviour
         {
             Debug.Log("colidiu");
             GameManager.instance.hp.PlayerHeal(10);
+            AudioObserver.OnPlaySfxEvent("collectible");
             Destroy(gameObject);
         }
         
