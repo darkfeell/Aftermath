@@ -6,13 +6,18 @@ public class EnemyBullet : MonoBehaviour
    
 
 {
+    public GameManager instance;
+    public int damageCaused;
     public float timeDestroy;
     void Update()
     {
         Destroy(gameObject, timeDestroy);
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.tag == "Player") GameManager.instance.hp.TakeDamage(damageCaused);
+        
+        Debug.Log("collidiu");
         Destroy(gameObject);
         
     }

@@ -5,7 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-    public int damageTaken;
+    
     //public int healAmount;
     public HealthBar bar;
     public GameObject player;
@@ -23,17 +23,19 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     
 
-    public void TakeDamage()
+    public void TakeDamage(int damageTaken)
     {
         currentHealth -= damageTaken;
         bar.SetHealth(currentHealth);
-        //PlayerDeath();
+        sprite.color = Color.blue;
+        if(currentHealth <= 0) StartCoroutine("PlayerDeath");
        
                  
                  
                  
         
     }
+    
 
     public IEnumerator PlayerDeath()
     {
