@@ -7,7 +7,7 @@ public class EnemyPatrol2D : MonoBehaviour
     public float detectionFlee;
     public float patrolSpeed = 2f;
     public float chaseSpeed = 4f;
-    public float fleeSpeed;
+    public float fleeSpeed = -4f;
     public Vector2[] patrolPoints;
 
     private int currentPatrolIndex;
@@ -19,7 +19,7 @@ public class EnemyPatrol2D : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentPatrolIndex = 0;
 
-        // Referência ao script de ataque
+        // Referï¿½ncia ao script de ataque
         enemyAttack = GetComponent<EnemyAttack>();
     }
 
@@ -31,22 +31,18 @@ public class EnemyPatrol2D : MonoBehaviour
         if (distanceToPlayer <= detectionRange && distanceToPlayer > detectionFlee)
         {
             ChasePlayer();
-            if (distanceToPlayer <= detectionFlee)
-            {
-
-            }
-            else
-            {
-                ChasePlayer();
-            }
         }
 
+        else if (distanceToPlayer <= detectionFlee && distanceToPlayer < detectionFlee)
+        {
+            FleePlayer();
+        }
         else
         {
             Patrol();
         }
 
-        // Chama a função de ataque
+        // Chama a funï¿½ï¿½o de ataque
         enemyAttack.Tattack(player, distanceToPlayer);
     }
 
@@ -64,6 +60,11 @@ public class EnemyPatrol2D : MonoBehaviour
     private void ChasePlayer()
     {
         MoveTowards(player.position, chaseSpeed);
+    }
+
+    private void FleePlayer()
+    {
+        MoveTowards(player.position, fleeSpeed);
     }
 
     private void MoveTowards(Vector2 targetPosition, float speed)
