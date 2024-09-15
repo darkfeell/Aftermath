@@ -8,11 +8,14 @@ public class PlayerShooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     private bool isReloading = false;
+    public bool canFire;
 
     public float bulletForce;
     public int maxAmmo;
     public int currentAmmo;
     public float reloadTime;
+    public float timer;
+    public float timeBetweenFiring;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +30,16 @@ public class PlayerShooting : MonoBehaviour
             StartCoroutine(Reload());
             return;
         }
-        if (Input.GetButtonDown("Fire1"))
+        if (!canFire)
+        {
+            timer += Time.deltaTime;
+            if(timer > timeBetweenFiring)
+            {
+                canFire = true;
+                timer = 0;
+            }
+        }
+        if (Input.GetButton("Fire1") && canFire)
         {
             Shoot();
         }
@@ -35,6 +47,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Shoot()
     {
+        canFire = false;
         currentAmmo--;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
