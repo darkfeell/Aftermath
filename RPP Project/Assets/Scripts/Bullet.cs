@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public int damage;
     void Update()
     {
         Destroy(gameObject, 4f);

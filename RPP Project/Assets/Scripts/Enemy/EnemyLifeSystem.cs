@@ -6,6 +6,7 @@ public class EnemyLifeSystem : MonoBehaviour
 {
     public int EnemyLife;
     public GameObject gameObj;
+    public Bullet pBullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class EnemyLifeSystem : MonoBehaviour
 
         if (collider.gameObject.tag == "pbullet")
         {
-            EnemyLife--;
+            EnemyLife -= pBullet.damage;
             gameObj.GetComponent<Renderer>().material.color = new Color(0, 2,2);
 
         }
