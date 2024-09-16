@@ -54,4 +54,13 @@ public class PlayerHealth : MonoBehaviour
         currentHealth += healAmount;
         bar.SetHealth(currentHealth);
     }
+
+    void OnEnable()
+    {
+        HealthObserver.healthGainedEvent += PlayerHeal;
+    }
+    void OnDisable()
+    {
+        HealthObserver.healthGainedEvent += PlayerHeal;
+    }
 }

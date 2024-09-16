@@ -12,7 +12,7 @@ public class MedKit : MonoBehaviour
         if (col.tag == "Player")
         {
             Debug.Log("colidiu");
-            GameManager.instance.hp.PlayerHeal(10);
+            HealthObserver.OnHealthGainEvent(10);
             AudioObserver.OnPlaySfxEvent("collectible");
             Destroy(gameObject);
         }

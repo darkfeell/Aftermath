@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public float volume;
     public static AudioManager instance;
 
     public AudioSource musicSource, sfxSource;
@@ -57,6 +58,7 @@ public class AudioManager : MonoBehaviour
         AudioObserver.PlayMusicEvent += PlayMusic;
         AudioObserver.StopMusicEvent += StopMusic;
         AudioObserver.PlaySfxEvent += PlaySfx;
+        AudioObserver.volumeChangedEvent += ProcessVolumeChanged;
     }
 
     private void OnDisable()
@@ -64,5 +66,11 @@ public class AudioManager : MonoBehaviour
         AudioObserver.PlayMusicEvent -= PlayMusic;
         AudioObserver.StopMusicEvent -= StopMusic;
         AudioObserver.PlaySfxEvent -= PlaySfx;
+        AudioObserver.volumeChangedEvent -= ProcessVolumeChanged;
+    }
+
+    void ProcessVolumeChanged(float value)
+    {
+        volume = value;
     }
 }
