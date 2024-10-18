@@ -8,6 +8,7 @@ public class EnemyPatrol2D : MonoBehaviour
     public float patrolSpeed = 2f;
     public float chaseSpeed = 4f;
     public float fleeSpeed = -4f;
+    public float NeutralPoint = 1f;
     public Vector2[] patrolPoints;
 
     private int currentPatrolIndex;
@@ -33,9 +34,13 @@ public class EnemyPatrol2D : MonoBehaviour
             ChasePlayer();
         }
 
-        else if (distanceToPlayer <= detectionFlee && distanceToPlayer < detectionFlee)
+        else if (distanceToPlayer < detectionFlee-NeutralPoint)
         {
             FleePlayer();
+        }
+        else if (distanceToPlayer >= detectionFlee-NeutralPoint) 
+        {
+            Patrol();
         }
         else
         {
@@ -44,6 +49,7 @@ public class EnemyPatrol2D : MonoBehaviour
 
         // Chama a fun��o de ataque
         enemyAttack.Tattack(player, distanceToPlayer);
+
     }
 
     private void Patrol()
