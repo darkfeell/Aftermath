@@ -13,12 +13,18 @@ public class PlayerHealth : MonoBehaviour
     public SpriteRenderer sprite;
     public PlayerMovement mov;
     public PlayerShooting shoot;
+
+
+    public void SetupHealth()
+    {
+        currentHealth = maxHealth;
+        bar.SetMaxHealth(maxHealth);
+    }
     
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
-        bar.SetMaxHealth(maxHealth);
+        SetupHealth();
     }
 
     // Update is called once per frame
@@ -26,20 +32,17 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damageTaken)
     {
+        if (currentHealth <= 0) return;
+        
         currentHealth -= damageTaken;
         bar.SetHealth(currentHealth);
         sprite.color = Color.blue;
         if(currentHealth <= 0) StartCoroutine("PlayerDeath");
-       
-                 
-                 
-                 
-        
     }
     
-
     public IEnumerator PlayerDeath()
     {
+        
         currentHealth = 0;
         bar.SetHealth(currentHealth);
         sprite.color = Color.red;

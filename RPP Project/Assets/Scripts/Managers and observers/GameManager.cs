@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public PlayerHealth hp;
 
+    public int sceneIndex;
 
     private void Awake()
     {
@@ -19,11 +20,13 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         else Destroy(gameObject);
+        sceneIndex = -1;
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        
         TryGetComponent(out hp);
     }
 

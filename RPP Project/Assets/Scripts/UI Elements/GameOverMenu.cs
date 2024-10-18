@@ -5,18 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
@@ -25,16 +13,28 @@ public class GameOverMenu : MonoBehaviour
 
     public void RestartLevel()
     {
-        string lastLevel = PlayerPrefs.GetString("LastLevel");
-
-        
-        if (!string.IsNullOrEmpty(lastLevel))
+        int sceneIndex = GameManager.instance.sceneIndex;
+        GameManager.instance.sceneIndex = -1;
+        GameManager.instance.hp.SetupHealth();
+        if (sceneIndex >= 0)
         {
-            SceneManager.LoadScene(lastLevel);
+            SceneManager.LoadScene(sceneIndex);
         }
         else
         {
             Debug.LogError("Nenhuma fase foi salva.");
+            SceneManager.LoadScene(0);
         }
+        
+        // string lastLevel = PlayerPrefs.GetString("LastLevel");
+        //
+        // if (!string.IsNullOrEmpty(lastLevel))
+        // {
+        //     SceneManager.LoadScene(lastLevel);
+        // }
+        // else
+        // {
+        //     Debug.LogError("Nenhuma fase foi salva.");
+        // }
     }
 }

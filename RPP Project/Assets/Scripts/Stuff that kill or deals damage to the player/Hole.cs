@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
-    public PlayerHealth PHealth;
+    //public PlayerHealth PHealth;
 
     public float deathTime = 0;
 
@@ -19,7 +19,11 @@ public class Hole : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player")) deathTime = 0;
+        if (other.CompareTag("Player"))
+        {
+            
+            deathTime = 0;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D col)
@@ -29,7 +33,9 @@ public class Hole : MonoBehaviour
             deathTime += Time.deltaTime;
             if (deathTime >= timeToDie)
             {
-                PHealth.StartCoroutine("PlayerDeath");
+                //col.gameObject.GetComponent<PlayerHealth>().isDead = true;
+                //col.gameObject.GetComponent<PlayerHealth>().DoDeath();
+                GameManager.instance.hp.TakeDamage(99999999);
                 Debug.Log("morreu");
             }
         }
