@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         movDirection = new Vector2(inputX, inputY).normalized;
         mousePosition = cam.ScreenToWorldPoint(Input.mousePosition); //rota��o do player
 
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        if (Input.GetKeyDown(KeyCode.Space) && canDash && PauseMenu.isGamePaused == false)
         {
             StartCoroutine(Dash());
         }

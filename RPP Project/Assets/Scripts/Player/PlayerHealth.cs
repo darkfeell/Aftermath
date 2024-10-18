@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
@@ -46,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
         mov.enabled = false;
         mov.rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(3f);
-        Destroy(player);
+        SceneManager.LoadScene("GameOver");
     }
 
     public void PlayerHeal(int healAmount)

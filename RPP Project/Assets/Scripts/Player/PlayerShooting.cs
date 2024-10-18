@@ -39,7 +39,7 @@ public class PlayerShooting : MonoBehaviour
                 timer = 0;
             }
         }
-        if (Input.GetButton("Fire1") && canFire)
+        if (Input.GetButton("Fire1") && canFire && PauseMenu.isGamePaused == false)
         {
             Shoot();
         }
