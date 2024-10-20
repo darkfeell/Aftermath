@@ -3,15 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance;
-
+    
     public PlayerHealth hp;
+    public PlayerMovement playerMove;
+    public PlayerShooting playerShoot;
+    
 
     public int sceneIndex;
+    public TextMeshProUGUI textBoxText;
+    public GameObject textBox;
 
     private void Awake()
     {
@@ -44,5 +50,14 @@ public class GameManager : MonoBehaviour
 
         
         
+    }
+    public void ShowText(string text)
+    {
+        textBox.SetActive(true);
+        textBoxText.text = text;
+    }
+    public void DisableText()
+    {
+        textBox.SetActive(false);
     }
 }

@@ -10,9 +10,8 @@ public class PlayerHealth : MonoBehaviour
     //public int healAmount;
     public HealthBar bar;
     public GameObject player;
-    public SpriteRenderer sprite;
-    public PlayerMovement mov;
-    public PlayerShooting shoot;
+    
+    
 
 
     public void SetupHealth()
@@ -36,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
         
         currentHealth -= damageTaken;
         bar.SetHealth(currentHealth);
-        sprite.color = Color.blue;
+        
         if(currentHealth <= 0) StartCoroutine("PlayerDeath");
     }
     
@@ -45,10 +44,10 @@ public class PlayerHealth : MonoBehaviour
         
         currentHealth = 0;
         bar.SetHealth(currentHealth);
-        sprite.color = Color.red;
-        shoot.enabled = false;
-        mov.enabled = false;
-        mov.rb.velocity = Vector2.zero;
+        
+        GameManager.instance.playerShoot.enabled = false;
+        GameManager.instance.playerMove.enabled = false;
+        GameManager.instance.playerMove.rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("GameOver");
     }

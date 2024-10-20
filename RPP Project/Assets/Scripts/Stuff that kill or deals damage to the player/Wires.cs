@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class Wires : MonoBehaviour
 {
-    public PlayerHealth PHealth;
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("colidiu");
-        if (other.CompareTag("Player")) PHealth.StartCoroutine("PlayerDeath");
+        
+        if (other.CompareTag("Player")) GameManager.instance.hp.TakeDamage(99999999);
 
     }
 }

@@ -7,8 +7,9 @@ using TMPro;
 public class Logs : MonoBehaviour
 {
     public string logText;
-    public GameObject textBox;
-    public TextMeshProUGUI textComponent;
+    
+    
+
     
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -16,20 +17,20 @@ public class Logs : MonoBehaviour
         {
             ShowText();
             
+            
         }
     }
     void OnTriggerExit2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
-            textBox.SetActive(false);
+            GameManager.instance.DisableText();
 
         }
     }
     void ShowText()
     {
-        textBox.SetActive(true);
-        textComponent.text = logText;
+        GameManager.instance.ShowText(logText);
     }
     
 }
