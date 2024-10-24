@@ -60,4 +60,8 @@ public class PlayerShooting : MonoBehaviour
         currentAmmo = maxAmmo;
         isReloading = false;
     }
+    void OnEnable()
+    {
+        GameManager.instance.SetShootScript(this);
+    }
 }

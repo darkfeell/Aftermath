@@ -60,4 +60,12 @@ public class GameManager : MonoBehaviour
     {
         textBox.SetActive(false);
     }
+    public void SetMovScript(PlayerMovement playerMovScript)
+    {
+        playerMove = playerMovScript;
+    }
+    public void SetShootScript(PlayerShooting playerShootScript)
+    {
+        playerShoot = playerShootScript;
+    }
 }

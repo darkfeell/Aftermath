@@ -69,4 +69,8 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
+    void OnEnable()
+    {
+        GameManager.instance.SetMovScript(this);
+    }
 }
