@@ -20,6 +20,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("TestScene");
+        GameManager.instance.hp.SetupHealth();
     }
 
     public void QuitGame()
