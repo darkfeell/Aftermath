@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public int sceneIndex;
     public TextMeshProUGUI textBoxText;
     public GameObject textBox;
+    public GameObject healthBar;
 
     private void Awake()
     {

@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour
 {
+    void Start(){
+        GameManager.instance.healthBar.SetActive(false);
+    }
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
@@ -16,6 +19,7 @@ public class GameOverMenu : MonoBehaviour
         int sceneIndex = GameManager.instance.sceneIndex;
         GameManager.instance.sceneIndex = -1;
         GameManager.instance.hp.SetupHealth();
+        GameManager.instance.healthBar.SetActive(true);
         if (sceneIndex >= 0)
         {
             SceneManager.LoadScene(sceneIndex);
