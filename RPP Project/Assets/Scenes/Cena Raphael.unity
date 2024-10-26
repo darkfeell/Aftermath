@@ -643,6 +643,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5289434083894990408, guid: c4c34ac56fe3181438107f82fa86abb1, type: 3}
+      propertyPath: pBullet
+      value: 
+      objectReference: {fileID: 932850750427830931, guid: 09222147640656d4e93a662d0139427c, type: 3}
+    - target: {fileID: 5289434083894990408, guid: c4c34ac56fe3181438107f82fa86abb1, type: 3}
+      propertyPath: EnemyLife
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8595751277711631684, guid: c4c34ac56fe3181438107f82fa86abb1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.05

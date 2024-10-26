@@ -5,6 +5,7 @@ using System;
 
 public static class AudioObserver 
 {
+    public static event Action<float> volumeChangedEvent;
     public static event Action<string> PlaySfxEvent;
 
     public static event Action PlayMusicEvent;
@@ -21,6 +22,11 @@ public static class AudioObserver
     public static void OnStopMusicEvent()
     {
         StopMusicEvent?.Invoke();
+    }
+
+    public static void OnVolumeChangedEvent(float volume)
+    {
+        volumeChangedEvent?.Invoke(volume);
     }
 
 }
