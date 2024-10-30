@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI textBoxText;
     public GameObject textBox;
     public GameObject healthBar;
+    public GameObject reloadTimerObj;
+    public Image reloadTimerImage;
 
     private void Awake()
     {
@@ -68,5 +71,15 @@ public class GameManager : MonoBehaviour
     public void SetShootScript(PlayerShooting playerShootScript)
     {
         playerShoot = playerShootScript;
+    }
+    public void ShowReloadTimer(float time)
+    {
+        Debug.Log("uau");
+        reloadTimerObj.SetActive(true);
+        reloadTimerImage.fillAmount = time;
+    }
+    public void DisableReloadTimer()
+    {
+        reloadTimerObj.SetActive(false);
     }
 }

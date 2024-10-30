@@ -142,54 +142,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 895003853149605220, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: m_text
-      value: Miguel e cefas ambos tem o canal retal vastamente alargado
-      objectReference: {fileID: 0}
-    - target: {fileID: 1812360191135097431, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4290568189774570096, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 27.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 4735228843004807109, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4735228843004807109, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4735228843004807109, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 230
-      objectReference: {fileID: 0}
-    - target: {fileID: 4735228843004807109, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 27.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 4735228843004807109, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 115
-      objectReference: {fileID: 0}
-    - target: {fileID: 4735228843004807109, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -13.605
-      objectReference: {fileID: 0}
     - target: {fileID: 5752880189301445830, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7614836464134474243, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: textBox
-      value: 
-      objectReference: {fileID: 422265728}
-    - target: {fileID: 7614836464134474243, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 962759208}
     - target: {fileID: 7614836464134474243, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
       propertyPath: playerMove
       value: 
@@ -198,26 +154,10 @@ PrefabInstance:
       propertyPath: playerShoot
       value: 
       objectReference: {fileID: 1263275836}
-    - target: {fileID: 7614836464134474243, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: textBoxText
-      value: 
-      objectReference: {fileID: 789012707}
-    - target: {fileID: 7701110384842482870, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: mov
-      value: 
-      objectReference: {fileID: 1263275837}
-    - target: {fileID: 7701110384842482870, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: shoot
-      value: 
-      objectReference: {fileID: 1263275836}
     - target: {fileID: 7701110384842482870, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1263275835}
-    - target: {fileID: 7701110384842482870, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: sprite
-      value: 
-      objectReference: {fileID: 1263275840}
     - target: {fileID: 7793679780685922410, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -524,11 +464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &962759208 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 506199261719674490, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-  m_PrefabInstance: {fileID: 327781954}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1263275835 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 652974697575971374, guid: 61a5dc1ad881a244fa2277c467d9bbfe, type: 3}
@@ -556,11 +491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a8178318106124a8b323496becafe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &1263275840 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8369102433928517362, guid: 61a5dc1ad881a244fa2277c467d9bbfe, type: 3}
-  m_PrefabInstance: {fileID: 2750624980308334918}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1464877945
 GameObject:
   m_ObjectHideFlags: 0
