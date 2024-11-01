@@ -7,6 +7,7 @@ public class GameOverMenu : MonoBehaviour
 {
     void Start(){
         GameManager.instance.healthBar.SetActive(false);
+        GameManager.instance.ammoTxt.SetActive(false);
     }
     public void LoadMenu()
     {
@@ -20,6 +21,7 @@ public class GameOverMenu : MonoBehaviour
         GameManager.instance.sceneIndex = -1;
         GameManager.instance.hp.SetupHealth();
         GameManager.instance.healthBar.SetActive(true);
+        GameManager.instance.ammoTxt.SetActive(true);
         if (sceneIndex >= 0)
         {
             SceneManager.LoadScene(sceneIndex);

@@ -53,5 +53,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameManager.instance.healthBar.SetActive(false);
         pauseMenuUI.SetActive(false);
+        GameManager.instance.ammoTxt.SetActive(false);
     }
 }

@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public GameObject reloadTimerObj;
     public Image reloadTimerImage;
     public TextMeshProUGUI ammoText;
+    public GameObject ammoTxt;
 
     private void Awake()
     {
