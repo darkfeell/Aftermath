@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public GameObject healthBar;
     public GameObject reloadTimerObj;
     public Image reloadTimerImage;
+    public TextMeshProUGUI ammoText;
 
     private void Awake()
     {
@@ -74,12 +75,17 @@ public class GameManager : MonoBehaviour
     }
     public void ShowReloadTimer(float time)
     {
-        Debug.Log("uau");
+        
         reloadTimerObj.SetActive(true);
         reloadTimerImage.fillAmount = time;
     }
     public void DisableReloadTimer()
     {
         reloadTimerObj.SetActive(false);
+    }
+
+    public void SetAmmoText()
+    {
+        ammoText.text = $"{playerShoot.currentAmmo} / {playerShoot.maxAmmo}";
     }
 }

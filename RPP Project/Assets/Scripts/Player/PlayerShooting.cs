@@ -26,6 +26,7 @@ public class PlayerShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameManager.instance.SetAmmoText();
         if (isReloading)
         {
             reloadTimer += Time.deltaTime;
