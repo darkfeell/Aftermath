@@ -14,13 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public float dashTime;
     public float dashCooldown;
     public Camera cam;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public Animator anim;
+    
     void Update()
     {
         
@@ -35,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         float inputY = Input.GetAxisRaw("Vertical");
 
         movDirection = new Vector2(inputX, inputY).normalized;
-        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition); //rota��o do player
+        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition); 
 
         if (Input.GetKeyDown(KeyCode.Space) && canDash && PauseMenu.isGamePaused == false)
         {
@@ -46,16 +41,21 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 lookDirection = mousePosition - transform.position;
         float angle = (Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg) - 90f;
-        rb.rotation = angle; //rota��o do player
+        rb.rotation = angle; 
         if (isDashing)
         {
             return;
         }
         Move();
+        if(movDirection.x == 0 && movDirection.y == 0)
+        {
+            anim.SetBool("isWalking", false);
+        }
     }
     void Move()
     {
         rb.velocity = new Vector2(movDirection.x * movSpeed, movDirection.y * movSpeed);
+        anim.SetBool("isWalking", true);
     }
     private IEnumerator Dash()
     {
@@ -74,3 +74,4 @@ public class PlayerMovement : MonoBehaviour
         GameManager.instance.SetMovScript(this);
     }
 }
+//

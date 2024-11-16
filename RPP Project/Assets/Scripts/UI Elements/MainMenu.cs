@@ -21,6 +21,8 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("TestScene");
         GameManager.instance.hp.SetupHealth();
+        GameManager.instance.healthBar.SetActive(true);
+        GameManager.instance.ammoTxt.SetActive(true);
     }
 
     public void QuitGame()

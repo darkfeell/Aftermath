@@ -14,7 +14,8 @@ public class PlayerShooting : MonoBehaviour
     public int maxAmmo;
     public int currentAmmo;
     public float reloadTime;
-    public float timer;
+    public float fireTimer;
+    public float reloadTimer;
     public float timeBetweenFiring;
     // Start is called before the first frame update
     void Start()
@@ -25,18 +26,31 @@ public class PlayerShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isReloading) return;
+        GameManager.instance.SetAmmoText();
+        if (isReloading)
+        {
+            reloadTimer += Time.deltaTime;
+            GameManager.instance.ShowReloadTimer(reloadTimer);
+            if (reloadTimer > reloadTime)
+            {
+                GameManager.instance.DisableReloadTimer();
+                reloadTimer = 0;
+            }
+            return;
+
+        }
+        
         if(currentAmmo <= 0){
             StartCoroutine(Reload());
             return;
         }
         if (!canFire)
         {
-            timer += Time.deltaTime;
-            if(timer > timeBetweenFiring)
+            fireTimer += Time.deltaTime;
+            if(fireTimer > timeBetweenFiring)
             {
                 canFire = true;
-                timer = 0;
+                fireTimer = 0;
             }
         }
         if (Input.GetButton("Fire1") && canFire && PauseMenu.isGamePaused == false)
@@ -56,9 +70,12 @@ public class PlayerShooting : MonoBehaviour
 
     IEnumerator Reload(){
         isReloading = true;
+        
         yield return new WaitForSeconds(reloadTime);
+        
         currentAmmo = maxAmmo;
         isReloading = false;
+        
     }
     void OnEnable()
     {

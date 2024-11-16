@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,11 @@ public class GameManager : MonoBehaviour
     public int sceneIndex;
     public TextMeshProUGUI textBoxText;
     public GameObject textBox;
+    public GameObject healthBar;
+    public GameObject reloadTimerObj;
+    public Image reloadTimerImage;
+    public TextMeshProUGUI ammoText;
+    public GameObject ammoTxt;
 
     private void Awake()
     {
@@ -67,5 +73,20 @@ public class GameManager : MonoBehaviour
     public void SetShootScript(PlayerShooting playerShootScript)
     {
         playerShoot = playerShootScript;
+    }
+    public void ShowReloadTimer(float time)
+    {
+        
+        reloadTimerObj.SetActive(true);
+        reloadTimerImage.fillAmount = time;
+    }
+    public void DisableReloadTimer()
+    {
+        reloadTimerObj.SetActive(false);
+    }
+
+    public void SetAmmoText()
+    {
+        ammoText.text = $"{playerShoot.currentAmmo} / {playerShoot.maxAmmo}";
     }
 }
