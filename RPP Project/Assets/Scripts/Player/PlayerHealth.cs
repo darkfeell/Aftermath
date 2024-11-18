@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     //public int healAmount;
     public HealthBar bar;
     public GameObject player;
+    public Animator anim;
     
     
 
@@ -35,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
         
         currentHealth -= damageTaken;
         bar.SetHealth(currentHealth);
+        anim.SetBool("isHit", true);
         
         if(currentHealth <= 0) StartCoroutine("PlayerDeath");
     }
@@ -50,6 +52,9 @@ public class PlayerHealth : MonoBehaviour
         GameManager.instance.playerMove.rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("GameOver");
+        anim.SetBool("isDead", true);
+        anim.SetBool("isWalking", false);
+        anim.SetBool("isHit", false);
     }
 
     public void PlayerHeal(int healAmount)

@@ -50,12 +50,14 @@ public class PlayerMovement : MonoBehaviour
         if(movDirection.x == 0 && movDirection.y == 0)
         {
             anim.SetBool("isWalking", false);
+            
         }
     }
     void Move()
     {
         rb.velocity = new Vector2(movDirection.x * movSpeed, movDirection.y * movSpeed);
         anim.SetBool("isWalking", true);
+        
     }
     private IEnumerator Dash()
     {
