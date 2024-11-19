@@ -11,7 +11,9 @@ public class PlayerHealth : MonoBehaviour
     public HealthBar bar;
     public GameObject player;
     //public Animator anim;
+    public float hitTime;
     
+    public int enemyDamage;
     
 
 
@@ -30,13 +32,11 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     
 
-    public void TakeDamage(int damageTaken)
+    public void TakeDamage()
     {
         if (currentHealth <= 0) return;
         
-        currentHealth -= damageTaken;
-        bar.SetHealth(currentHealth);
-        GameManager.instance.playerMove.anim.SetBool("isHit", true);
+        StartCoroutine("TakingDamage");
 
         if (currentHealth <= 0) StartCoroutine("PlayerDeath");
     }
@@ -45,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
     {
         
         currentHealth = 0;
+        enemyDamage = 0;
         bar.SetHealth(currentHealth);
         GameManager.instance.playerMove.anim.SetBool("isDead", true);
         GameManager.instance.playerMove.anim.SetBool("isHit", false);
@@ -70,5 +71,16 @@ public class PlayerHealth : MonoBehaviour
     void OnDisable()
     {
         HealthObserver.healthGainedEvent += PlayerHeal;
+    }
+    public IEnumerator TakingDamage(){
+        currentHealth -= enemyDamage;
+        bar.SetHealth(currentHealth);
+        GameManager.instance.playerMove.anim.SetBool("isHit", true);
+        GameManager.instance.playerMove.anim.SetBool("isWalking", false);
+        yield return new WaitForSeconds(hitTime);
+        GameManager.instance.playerMove.anim.SetBool("isHit", false);
+    }
+    public void SetUpDamage(int damageTaken){
+        enemyDamage = damageTaken;
     }
 }

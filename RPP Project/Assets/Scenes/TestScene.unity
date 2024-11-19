@@ -178,6 +178,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7701110384842482870, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
+      propertyPath: hitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7701110384842482870, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
+      propertyPath: deathTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7793679780685922410, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

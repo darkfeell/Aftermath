@@ -63,6 +63,7 @@ public class PlayerShooting : MonoBehaviour
     {
         canFire = false;
         currentAmmo--;
+        GameManager.instance.playerMove.anim.SetBool("isShooting", true);
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);

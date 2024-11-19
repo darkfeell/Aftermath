@@ -35,7 +35,8 @@ public class Hole : MonoBehaviour
             {
                 //col.gameObject.GetComponent<PlayerHealth>().isDead = true;
                 //col.gameObject.GetComponent<PlayerHealth>().DoDeath();
-                GameManager.instance.hp.TakeDamage(99999999);
+                GameManager.instance.hp.SetUpDamage(99999999);
+                GameManager.instance.hp.TakeDamage();
                 Debug.Log("morreu");
             }
         }

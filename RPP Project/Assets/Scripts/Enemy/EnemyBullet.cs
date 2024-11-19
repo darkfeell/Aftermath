@@ -15,7 +15,10 @@ public class EnemyBullet : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player") GameManager.instance.hp.TakeDamage(damageCaused);
+        if(collision.tag == "Player"){
+            GameManager.instance.hp.SetUpDamage(damageCaused);
+            GameManager.instance.hp.TakeDamage();
+        }
         
         Debug.Log("collidiu");
         Destroy(gameObject);
