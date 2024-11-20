@@ -42,6 +42,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
+        AudioObserver.OnPlaySfxEvent("button");
         pauseMenuUI.SetActive(false);
         isGamePaused = false;
         Time.timeScale = 1f;
@@ -49,10 +50,13 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        AudioObserver.OnPlaySfxEvent("button");
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
         GameManager.instance.healthBar.SetActive(false);
         pauseMenuUI.SetActive(false);
+        GameManager.instance.reloadTimerObj.SetActive(false);
         GameManager.instance.ammoTxt.SetActive(false);
+        isGamePaused = false;
     }
 }

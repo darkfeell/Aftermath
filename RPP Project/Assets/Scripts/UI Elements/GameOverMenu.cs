@@ -11,12 +11,14 @@ public class GameOverMenu : MonoBehaviour
     }
     public void LoadMenu()
     {
+        AudioObserver.OnPlaySfxEvent("button");
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
     }
 
     public void RestartLevel()
     {
+        AudioObserver.OnPlaySfxEvent("button");
         int sceneIndex = GameManager.instance.sceneIndex;
         GameManager.instance.sceneIndex = -1;
         GameManager.instance.hp.SetupHealth();

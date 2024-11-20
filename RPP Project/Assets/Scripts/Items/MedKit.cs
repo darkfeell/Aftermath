@@ -13,7 +13,7 @@ public class MedKit : MonoBehaviour
         {
             Debug.Log("colidiu");
             HealthObserver.OnHealthGainEvent(10);
-            AudioObserver.OnPlaySfxEvent("collectible");
+            AudioObserver.OnPlaySfxEvent("medkit");
             Destroy(gameObject);
         }
         

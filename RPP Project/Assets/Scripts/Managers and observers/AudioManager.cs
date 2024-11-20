@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource musicSource, sfxSource;
 
-    public AudioClip dashClip, collectibleClip;
+    public AudioClip dashClip, medkitClip, buttonUIClip, shotClip, reloadClip, damageClip, walkClip;
     // Start is called before the first frame update
     void Awake()
     {
@@ -34,8 +34,23 @@ public class AudioManager : MonoBehaviour
             case "dash":
                 sfxSource.PlayOneShot(dashClip);
                 break;
-            case "collectible":
-                sfxSource.PlayOneShot(collectibleClip);
+            case "medkit":
+                sfxSource.PlayOneShot(medkitClip);
+                break;
+            case "button":
+                sfxSource.PlayOneShot(buttonUIClip);
+                break;
+            case "shot":
+                sfxSource.PlayOneShot(shotClip);
+                break;
+            case "reload":
+                sfxSource.PlayOneShot(reloadClip);
+                break;
+            case "damage":
+                sfxSource.PlayOneShot(damageClip);
+                break;
+            case "walk":
+                sfxSource.PlayOneShot(walkClip);
                 break;
             default:
                 Debug.LogError($"SOUND EFFECT {clipName} NOT FOUND");

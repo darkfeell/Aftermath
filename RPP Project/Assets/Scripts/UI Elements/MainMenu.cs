@@ -19,6 +19,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
+        AudioObserver.OnPlaySfxEvent("button");
         SceneManager.LoadScene("TestScene");
         GameManager.instance.hp.SetupHealth();
         GameManager.instance.healthBar.SetActive(true);
@@ -27,6 +28,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        AudioObserver.OnPlaySfxEvent("button");
         Application.Quit();
     }
 }

@@ -393,6 +393,22 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6485748376627554927, guid: fea7a9ef3c7956b42900fe770d9b1e51, type: 3}
+      propertyPath: shotClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 45762d7e5803b9348ba6b9bf44d8e314, type: 3}
+    - target: {fileID: 6485748376627554927, guid: fea7a9ef3c7956b42900fe770d9b1e51, type: 3}
+      propertyPath: damageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2da9f2c132562c04087758deb278a150, type: 3}
+    - target: {fileID: 6485748376627554927, guid: fea7a9ef3c7956b42900fe770d9b1e51, type: 3}
+      propertyPath: medkitClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bf9e4d161fcdfcc4c92a8210f05f005e, type: 3}
+    - target: {fileID: 6485748376627554927, guid: fea7a9ef3c7956b42900fe770d9b1e51, type: 3}
+      propertyPath: buttonUIClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c919c74c7471f7547be8cde2d4fe960e, type: 3}
+    - target: {fileID: 6485748376627554927, guid: fea7a9ef3c7956b42900fe770d9b1e51, type: 3}
       propertyPath: collectibleClip
       value: 
       objectReference: {fileID: 8300000, guid: bf9e4d161fcdfcc4c92a8210f05f005e, type: 3}
