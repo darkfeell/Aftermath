@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     //public int healAmount;
     public HealthBar bar;
     public GameObject player;
-    //public Animator anim;
+    //public Animator anim; j
     public float hitTime;
     
     public int enemyDamage;
@@ -77,6 +77,7 @@ public class PlayerHealth : MonoBehaviour
         bar.SetHealth(currentHealth);
         GameManager.instance.playerMove.anim.SetBool("isHit", true);
         GameManager.instance.playerMove.anim.SetBool("isWalking", false);
+        AudioObserver.OnPlaySfxEvent("damage");
         yield return new WaitForSeconds(hitTime);
         GameManager.instance.playerMove.anim.SetBool("isHit", false);
     }
