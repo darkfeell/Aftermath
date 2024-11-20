@@ -55,11 +55,11 @@ public class PlayerShooting : MonoBehaviour
         }
         if (Input.GetButton("Fire1") && canFire && PauseMenu.isGamePaused == false)
         {
-            Shoot();
+            StartCoroutine("Shoot");
         }
     }
 
-    void Shoot()
+    IEnumerator Shoot()
     {
         canFire = false;
         currentAmmo--;
@@ -67,6 +67,8 @@ public class PlayerShooting : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(0.3f);
+        GameManager.instance.playerMove.anim.SetBool("isShooting", false);
     }
 
     IEnumerator Reload(){
