@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float dashCooldown;
     public Camera cam;
     public Animator anim;
+    public int batteriesCollected;
     
     void Update()
     {
