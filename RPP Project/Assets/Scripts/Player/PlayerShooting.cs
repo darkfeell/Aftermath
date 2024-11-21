@@ -74,7 +74,7 @@ public class PlayerShooting : MonoBehaviour
 
     IEnumerator Reload(){
         isReloading = true;
-        
+        AudioObserver.OnPlaySfxEvent("reload");
         yield return new WaitForSeconds(reloadTime);
         
         currentAmmo = maxAmmo;

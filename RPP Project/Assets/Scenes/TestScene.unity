@@ -142,26 +142,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 618917205397230116, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5752880189301445830, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6089009344590658809, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7614836464134474243, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 562142943}
-    - target: {fileID: 7614836464134474243, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: ammoTxt
-      value: 
-      objectReference: {fileID: 1488757327}
     - target: {fileID: 7614836464134474243, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
       propertyPath: playerMove
       value: 
@@ -170,22 +154,6 @@ PrefabInstance:
       propertyPath: playerShoot
       value: 
       objectReference: {fileID: 562142945}
-    - target: {fileID: 7701110384842482870, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 562142943}
-    - target: {fileID: 7701110384842482870, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7701110384842482870, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: hitTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7701110384842482870, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-      propertyPath: deathTime
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7793679780685922410, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -308,11 +276,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 652974697575971374, guid: 2888849fcc1c95b4b80f559fdaaca1b8, type: 3}
   m_PrefabInstance: {fileID: 934467739}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &562142943 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4227182786703489953, guid: 2888849fcc1c95b4b80f559fdaaca1b8, type: 3}
-  m_PrefabInstance: {fileID: 934467739}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &562142944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3687364904122404054, guid: 2888849fcc1c95b4b80f559fdaaca1b8, type: 3}
@@ -392,6 +355,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 2138579740706384637, guid: fea7a9ef3c7956b42900fe770d9b1e51, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6485748376627554927, guid: fea7a9ef3c7956b42900fe770d9b1e51, type: 3}
       propertyPath: shotClip
       value: 
@@ -404,6 +371,10 @@ PrefabInstance:
       propertyPath: medkitClip
       value: 
       objectReference: {fileID: 8300000, guid: bf9e4d161fcdfcc4c92a8210f05f005e, type: 3}
+    - target: {fileID: 6485748376627554927, guid: fea7a9ef3c7956b42900fe770d9b1e51, type: 3}
+      propertyPath: reloadClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c94c6be4778c09943b6b097d0f23e320, type: 3}
     - target: {fileID: 6485748376627554927, guid: fea7a9ef3c7956b42900fe770d9b1e51, type: 3}
       propertyPath: buttonUIClip
       value: 
@@ -634,11 +605,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1488757327 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6089009344590658809, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-  m_PrefabInstance: {fileID: 327781954}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1871701116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -690,6 +656,10 @@ PrefabInstance:
     - target: {fileID: 458885173187574469, guid: c4c34ac56fe3181438107f82fa86abb1, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 458885173187574469, guid: c4c34ac56fe3181438107f82fa86abb1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 557105659466920665, guid: c4c34ac56fe3181438107f82fa86abb1, type: 3}
       propertyPath: player
