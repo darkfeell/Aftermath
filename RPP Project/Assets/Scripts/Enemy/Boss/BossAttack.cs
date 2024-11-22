@@ -9,7 +9,7 @@ public class BossAttack : MonoBehaviour
     public Transform aim;
     private BossHealth health;
     public GameObject bullet;
-    //public Animator anim;
+    public Animator anim;
     private Transform firePoint;
     //private AudioSource audio;
 
@@ -35,7 +35,7 @@ public class BossAttack : MonoBehaviour
         waveCooldownTimer = waveAttackCooldown;
         currentTimerToAttack = timerToAttack2State;
         health.canTakeDamage = true;
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         firePoint = aim.GetChild(0);
         // audio = GetComponent<AudioSource>();
     }
@@ -80,7 +80,7 @@ public class BossAttack : MonoBehaviour
         if (TimerToShoot())
         {
             Shoot();
-            // anim.SetBool("isAttacking", true);v
+            anim.SetBool("bossAtk", true);
             currentTimerToAttack = timerToAttack2State;
         }
 
@@ -103,7 +103,7 @@ public class BossAttack : MonoBehaviour
     public void Shoot()
     {
         Instantiate(bullet, firePoint.position, aim.rotation);
-        //audio.Play();
+        AudioObserver.OnPlaySfxEvent("bossAtk");
 
     }
 
@@ -112,7 +112,7 @@ public class BossAttack : MonoBehaviour
     IEnumerator FirstStateAttack()
     {
         attacking = true;
-        //  anim.SetBool("isAttacking", true);
+        anim.SetBool("bossAtk", true);
         float startAngle = Random.Range(0, 360);
         health.canTakeDamage = false;
         for (int i = 0; i < waveCounter; i++)
@@ -136,7 +136,7 @@ public class BossAttack : MonoBehaviour
         }
         health.canTakeDamage = true;
         attacking = false;
-        // anim.SetBool("isAttacking", false);
+        anim.SetBool("bossAtk", false);
     }
 }
 public enum BossStates

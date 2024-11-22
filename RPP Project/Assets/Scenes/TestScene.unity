@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &233659221 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7701110384842482870, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
-  m_PrefabInstance: {fileID: 327781954}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17abfb2ef035a0c42811bcc3f37dd261, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &327781954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -949,10 +938,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole
       objectReference: {fileID: 0}
-    - target: {fileID: 4370273676328538893, guid: 289115a661f4bfd408a26f07300e5d62, type: 3}
-      propertyPath: PHealth
-      value: 
-      objectReference: {fileID: 233659221}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1029,7 +1014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 489426284876344533, guid: d6f8c9ecb195f5640aacca23a164da1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.65
+      value: -1.935
       objectReference: {fileID: 0}
     - target: {fileID: 489426284876344533, guid: d6f8c9ecb195f5640aacca23a164da1f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1067,10 +1052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wire
       objectReference: {fileID: 0}
-    - target: {fileID: 8791642897700601557, guid: d6f8c9ecb195f5640aacca23a164da1f, type: 3}
-      propertyPath: PHealth
-      value: 
-      objectReference: {fileID: 233659221}
+    - target: {fileID: 3857315367781644930, guid: d6f8c9ecb195f5640aacca23a164da1f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.19
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

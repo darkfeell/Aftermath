@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource musicSource, sfxSource;
 
-    public AudioClip dashClip, medkitClip, buttonUIClip, shotClip, reloadClip, damageClip, walkClip;
+    public AudioClip dashClip, medkitClip, buttonUIClip, shotClip, reloadClip, damageClip, walkClip, bossAtkClip;
     // Start is called before the first frame update
     void Awake()
     {
@@ -51,6 +51,9 @@ public class AudioManager : MonoBehaviour
                 break;
             case "walk":
                 sfxSource.PlayOneShot(walkClip);
+                break;
+            case "bossAtk":
+                sfxSource.PlayOneShot(bossAtkClip);
                 break;
             default:
                 Debug.LogError($"SOUND EFFECT {clipName} NOT FOUND");
