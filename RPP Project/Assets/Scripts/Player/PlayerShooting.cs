@@ -40,7 +40,7 @@ public class PlayerShooting : MonoBehaviour
 
         }
         
-        if(currentAmmo <= 0){
+        if(currentAmmo <= 0 || Input.GetKeyDown(KeyCode.R)){
             StartCoroutine(Reload());
             return;
         }
