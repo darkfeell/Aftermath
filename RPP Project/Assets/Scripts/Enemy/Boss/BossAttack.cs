@@ -43,8 +43,8 @@ public class BossAttack : MonoBehaviour
 
     void Update()
     {
-        //anim.SetFloat("Horizontal", firePoint.position.x);
-        //anim.SetFloat("Vertical", firePoint.position.y);
+        anim.SetFloat("Horizontal", firePoint.position.x);
+        anim.SetFloat("Vertical", firePoint.position.y);
         switch (stateBoss)
         {
             case BossStates.State1:
@@ -58,6 +58,7 @@ public class BossAttack : MonoBehaviour
 
     void UpdateStateOne()
     {
+        
         if (WaveCooldownTimer())
         {
             StartCoroutine(FirstStateAttack());
@@ -98,6 +99,16 @@ public class BossAttack : MonoBehaviour
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
 
         aim.rotation = Quaternion.Euler(0f, 0f, angle);
+    }
+    void LookToFirepoint()
+    {
+        Vector2 direction = firePoint.position - transform.position;
+
+        // Calcula o ângulo para rotacionar
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        // Aplica a rotação ao inimigo
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
     public void Shoot()
