@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9b6a718b30833fc438e366c5e568940f
+guid: 5b64b3040c626434bba6e567308c30ea
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,6 +81,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -106,30 +119,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RobotRangedWalk_0
+      name: RangedBoiAtckt_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 123
-        width: 24
-        height: 41
+        x: 2
+        y: 179
+        width: 78
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bd31b33821731b46a7a26417a6fc4c9
-      internalID: -166828618
+      spriteID: 3e47f0e0722abe34b8064d4c19dfe58b
+      internalID: -801798082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotRangedWalk_1
+      name: RangedBoiAtckt_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 82
-        width: 24
-        height: 41
+        x: 5
+        y: 136
+        width: 78
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c888b0add8f054c45ade07e6523e4bb2
-      internalID: 382881845
+      spriteID: 583c19350bef91f4685a1a021ab3c134
+      internalID: 952464350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotRangedWalk_2
+      name: RangedBoiAtckt_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 41
-        width: 24
-        height: 41
+        x: 7
+        y: 93
+        width: 76
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae3315eae7544394aaa8f2efef6bc350
-      internalID: -924319528
+      spriteID: 9993c862a679d6d4f85884bbec34a592
+      internalID: 66699442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotRangedWalk_3
+      name: RangedBoiAtckt_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 24
-        height: 41
+        x: 3
+        y: 49
+        width: 80
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cc15a5f6e01a774bbd7a4f2038ea907
-      internalID: 1302432002
+      spriteID: b21c1c55dea86844c961cc224a42993b
+      internalID: -1566698326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangedBoiAtckt_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 7
+        width: 81
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d911e8083fd5a14cb2a5aed3f3af254
+      internalID: 1757907757
       vertices: []
       indices: 
       edges: []
@@ -217,10 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RobotRangedWalk_0: -166828618
-      RobotRangedWalk_1: 382881845
-      RobotRangedWalk_2: -924319528
-      RobotRangedWalk_3: 1302432002
+      RangedBoiAtckt_0: -801798082
+      RangedBoiAtckt_1: 952464350
+      RangedBoiAtckt_2: 66699442
+      RangedBoiAtckt_3: -1566698326
+      RangedBoiAtckt_4: 1757907757
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

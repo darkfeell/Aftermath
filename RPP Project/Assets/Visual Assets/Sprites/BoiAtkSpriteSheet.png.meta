@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9b6a718b30833fc438e366c5e568940f
+guid: fc9751d572bb86c45ada605554a4bcf6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,6 +81,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -106,30 +119,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RobotRangedWalk_0
+      name: BoiAtkSpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 123
-        width: 24
-        height: 41
+        x: 2
+        y: 222
+        width: 75
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bd31b33821731b46a7a26417a6fc4c9
-      internalID: -166828618
+      spriteID: a53673c4e9ebdde449c92c5892f72c3c
+      internalID: -153269951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotRangedWalk_1
+      name: BoiAtkSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 82
-        width: 24
-        height: 41
+        x: 6
+        y: 179
+        width: 71
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c888b0add8f054c45ade07e6523e4bb2
-      internalID: 382881845
+      spriteID: 170d7b7fd0bd1754b8f928bd26e0dae1
+      internalID: 1323916381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotRangedWalk_2
+      name: BoiAtkSpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 41
-        width: 24
-        height: 41
+        x: 6
+        y: 136
+        width: 75
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae3315eae7544394aaa8f2efef6bc350
-      internalID: -924319528
+      spriteID: 777b6c06833afa547adc1dbcfbd2ce54
+      internalID: 1578651599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotRangedWalk_3
+      name: BoiAtkSpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 24
-        height: 41
+        x: 6
+        y: 88
+        width: 75
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cc15a5f6e01a774bbd7a4f2038ea907
-      internalID: 1302432002
+      spriteID: 188acbe8c3d22184ea8d2b83b444bbb7
+      internalID: 1276971260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoiAtkSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 49
+        width: 75
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c0f63d4b393d548b94030c9e09ee9c
+      internalID: -1028842947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoiAtkSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 7
+        width: 75
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a531fa05f4bf5447b727cfe6641a117
+      internalID: -310809103
       vertices: []
       indices: 
       edges: []
@@ -217,10 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RobotRangedWalk_0: -166828618
-      RobotRangedWalk_1: 382881845
-      RobotRangedWalk_2: -924319528
-      RobotRangedWalk_3: 1302432002
+      BoiAtkSpriteSheet_0: -153269951
+      BoiAtkSpriteSheet_1: 1323916381
+      BoiAtkSpriteSheet_2: 1578651599
+      BoiAtkSpriteSheet_3: 1276971260
+      BoiAtkSpriteSheet_4: -1028842947
+      BoiAtkSpriteSheet_5: -310809103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

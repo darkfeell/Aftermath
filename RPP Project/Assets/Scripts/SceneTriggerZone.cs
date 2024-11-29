@@ -15,7 +15,7 @@ public class SceneTriggerZone : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(batteriesNecessary == GameManager.instance.playerMove.batteriesCollected)
+        if(batteriesNecessary == GameManager.instance.playerMove.batteriesCollected && col.tag == "Player")
         {
             SceneManager.LoadScene(nextSceneName);
         }
