@@ -8,7 +8,7 @@ public class GameOverMenu : MonoBehaviour
     void Start(){
         GameManager.instance.healthBar.SetActive(false);
         GameManager.instance.ammoTxt.SetActive(false);
-        GameManager.instance.bossHealthBar.SetActive(false);
+        //GameManager.instance.bossHealthBar.SetActive(false);
     }
     public void LoadMenu()
     {

@@ -8,7 +8,7 @@ public class EnemyAttack : MonoBehaviour
     public float projectileSpeed = 5f;
     public float attackRange = 3f;  // Alcance de ataque
     public float attackCooldown = 2f;  // Tempo de espera entre ataques
-
+    public Animator anim;
     private bool canAttack = true;
 
     public void Tattack(Transform player, float distanceToPlayer)
@@ -22,6 +22,7 @@ public class EnemyAttack : MonoBehaviour
     private IEnumerator Attack(Transform player)
     {
         canAttack = false;
+        anim.SetBool("isAtk", true);
 
         // Instancia o projétil na posição do firePoint
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
@@ -34,7 +35,9 @@ public class EnemyAttack : MonoBehaviour
         projectileRb.velocity = direction * projectileSpeed;
 
         // Espera pelo cooldown antes de permitir o próximo ataque
+        
         yield return new WaitForSeconds(attackCooldown);
+        anim.SetBool("isAtk", false);
         canAttack = true;
     }
 }
