@@ -173,4 +173,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instance: {fileID: 7614836464134474243, guid: c1b4fdbd0f7ee6549ac04126ce9eb61d, type: 3}
   damageCaused: 10
-  timeDestroy: 1
+  timeDestroy: 4
