@@ -46,10 +46,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daef3f5e90290445b911ed6dd561730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 0
   musicSource: {fileID: 2138579740706384637}
   sfxSource: {fileID: 4783102534493799576}
   dashClip: {fileID: 8300000, guid: 645a730c9faeee542b8352bf16a269a0, type: 3}
-  colectableClip: {fileID: 8300000, guid: bf9e4d161fcdfcc4c92a8210f05f005e, type: 3}
+  medkitClip: {fileID: 8300000, guid: bf9e4d161fcdfcc4c92a8210f05f005e, type: 3}
+  buttonUIClip: {fileID: 8300000, guid: c919c74c7471f7547be8cde2d4fe960e, type: 3}
+  shotClip: {fileID: 8300000, guid: 45762d7e5803b9348ba6b9bf44d8e314, type: 3}
+  reloadClip: {fileID: 8300000, guid: c94c6be4778c09943b6b097d0f23e320, type: 3}
+  damageClip: {fileID: 8300000, guid: 2da9f2c132562c04087758deb278a150, type: 3}
+  walkClip: {fileID: 0}
+  bossAtkClip: {fileID: 0}
 --- !u!82 &2138579740706384637
 AudioSource:
   m_ObjectHideFlags: 0
@@ -60,7 +67,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 88fb40c6fa5e24343891327f1368fcf2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 42de8a1b3735b924fa437f26317555eb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

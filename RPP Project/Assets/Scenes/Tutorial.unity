@@ -32059,6 +32059,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6576697893564539721, guid: cc414d40171a7bc4d9adcc66b7446b66, type: 3}
+      propertyPath: newMaxAmmo
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6576697893564539721, guid: cc414d40171a7bc4d9adcc66b7446b66, type: 3}
+      propertyPath: newReloadTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6576697893564539721, guid: cc414d40171a7bc4d9adcc66b7446b66, type: 3}
+      propertyPath: newTimeBetweenFiring
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7847948459518254190, guid: cc414d40171a7bc4d9adcc66b7446b66, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.451153
