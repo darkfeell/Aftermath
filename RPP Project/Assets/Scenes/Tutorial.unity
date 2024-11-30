@@ -23888,6 +23888,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 553984285979647012, guid: a1efb1c6c6fec3d4ca145e2dff2cbe48, type: 3}
+      propertyPath: nextSceneName
+      value: Fase1
+      objectReference: {fileID: 0}
+    - target: {fileID: 553984285979647012, guid: a1efb1c6c6fec3d4ca145e2dff2cbe48, type: 3}
       propertyPath: batteriesNecessary
       value: 3
       objectReference: {fileID: 0}

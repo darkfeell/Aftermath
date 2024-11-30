@@ -20,4 +20,12 @@ public class SceneTriggerZone : MonoBehaviour
             SceneManager.LoadScene(nextSceneName);
         }
     }
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (batteriesNecessary == GameManager.instance.playerMove.batteriesCollected && col.tag == "Player")
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
+    }
 }
