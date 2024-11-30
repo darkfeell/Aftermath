@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         AudioObserver.OnPlaySfxEvent("button");
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("Cutscene1");
         GameManager.instance.hp.SetupHealth();
         GameManager.instance.healthBar.SetActive(true);
         GameManager.instance.ammoTxt.SetActive(true);
