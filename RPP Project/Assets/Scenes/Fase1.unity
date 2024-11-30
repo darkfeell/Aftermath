@@ -870,6 +870,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Letter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8013486204704332550, guid: 2b78b70b33e51294eadbbbf91e0a4a8f, type: 3}
+      propertyPath: logText
+      value: "A cada novo modelo que lan\xE7amos, fico mais impressionada com o que
+        conseguimos alcan\xE7ar. Os rob\xF4s AmT eram para ser apenas assistentes
+        de reparos, mas rapidamente se tornaram ferramentas indispens\xE1veis. Agora,
+        estamos no est\xE1gio em que eles podem at\xE9 substituir soldados.  Hoje,
+        testamos o AmT-X pela primeira vez. Ele \xE9 muito mais r\xE1pido e eficiente
+        do que qualquer outro modelo anterior."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45044,6 +45053,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Letter (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8013486204704332550, guid: 2b78b70b33e51294eadbbbf91e0a4a8f, type: 3}
+      propertyPath: logText
+      value: "Estive revisando os c\xF3digos do novo protocolo de seguran\xE7a que
+        implantamos nos servidores centrais. Sabe, \xE0s vezes fico impressionado
+        com a complexidade do que criamos aqui. A AmTech n\xE3o \xE9 s\xF3 uma empresa
+        de tecnologia, \xE9 praticamente um c\xE9rebro coletivo que nunca para de
+        evoluir. \xC9 incr\xEDvel, mas assustador. Se algu\xE9m algum dia comprometer
+        nossos servidores ou replicar esse sistema... Bom, prefiro n\xE3o pensar
+        nisso."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -59629,6 +59648,17 @@ PrefabInstance:
     - target: {fileID: 7157512105836409359, guid: 2b78b70b33e51294eadbbbf91e0a4a8f, type: 3}
       propertyPath: m_Name
       value: Letter
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013486204704332550, guid: 2b78b70b33e51294eadbbbf91e0a4a8f, type: 3}
+      propertyPath: logText
+      value: "Os notici\xE1rios n\xE3o param de falar sobre 'escalada de tens\xF5es',
+        mas aqui dentro as coisas continuam estranhamente normais. Recebemos uma
+        nova leva de pedidos militares ontem \u2014 sistemas mais resistentes, mais
+        letais. Est\xE1 claro que estamos fabricando algo al\xE9m de simples avan\xE7os
+        tecnol\xF3gicos.  \xC9 dif\xEDcil n\xE3o se perguntar para onde isso tudo
+        vai nos levar. As reuni\xF5es est\xE3o cada vez mais tensas, e o setor administrativo
+        parece estar escondendo algo. Falam em seguran\xE7a nacional, mas todos sabemos
+        que 'seguran\xE7a' \xE9 uma palavra ilus\xF3ria hoje em dia."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
