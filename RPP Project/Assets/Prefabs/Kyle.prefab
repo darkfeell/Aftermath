@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.8657608, y: 3.8657608, z: 3.8657608}
+  m_LocalScale: {x: 4.549227, y: 4.5492277, z: 4.549227}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4341156042616752074}
@@ -149,10 +149,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0015002489, y: -0.05121997}
+  m_Offset: {x: 0.0015002489, y: 0.008549601}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.49089134, y: 0.20348613}
     oldSize: {x: 0.3, y: 0.42}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -160,7 +160,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3240757, y: 0.31705308}
+  m_Size: {x: 0.3240757, y: 0.19751391}
   m_EdgeRadius: 0
 --- !u!114 &5607234930778422676
 MonoBehaviour:
@@ -183,6 +183,7 @@ MonoBehaviour:
   dashCooldown: 1
   cam: {fileID: 0}
   anim: {fileID: 4227182786703489953}
+  batteriesCollected: 0
 --- !u!114 &5553437916423500870
 MonoBehaviour:
   m_ObjectHideFlags: 0

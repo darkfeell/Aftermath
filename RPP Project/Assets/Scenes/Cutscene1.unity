@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &20238948
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1170,7 +1170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &408929933
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1562,6 +1562,38 @@ PlayableDirector:
     value: {fileID: 1253818515}
   - key: {fileID: 2125987651835608530, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
     value: {fileID: 870025169}
+  - key: {fileID: 4086071719571314335, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -2975103606625189795, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -5611300508588366147, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6618575851189556983, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 20238947}
+  - key: {fileID: -3371135596275996423, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 408929932}
+  - key: {fileID: 3494466172514813302, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 552593325}
+  - key: {fileID: 934839347745087172, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 146303986}
+  - key: {fileID: 8974993600579120393, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 890228174}
+  - key: {fileID: -1100117399688950755, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 109795291}
+  - key: {fileID: 7940943783512707909, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 1500394026}
+  - key: {fileID: 1789811662832729934, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 1704661559}
+  - key: {fileID: -4447381359740779883, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 1028102043}
+  - key: {fileID: 1760937860954913162, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 175495319}
+  - key: {fileID: 7178709385899392357, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 1086014383}
+  - key: {fileID: 2863511250144877635, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 1253818515}
+  - key: {fileID: 6521899729319129585, guid: 6f9d4be547b3cee44a52d75b155b6a6a, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 048bec66ed07b84448e0e3d085229682: {fileID: 80883935}

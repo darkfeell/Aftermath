@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class BossHealth : MonoBehaviour
 {
-    public float health;
+    public int health;
     public bool canTakeDamage;
     public BossAttack attackBoss;
-    private float maxHealth;
+    private int maxHealth;
     public Bullet playerBullet;
     //public LevelManager levelManager;
 
-    //public Image bossHealthBar;
+    public HealthBar bossHealthBar;
 
    // public void Damage(float damage)
    // {
@@ -29,12 +29,14 @@ public class BossHealth : MonoBehaviour
         if(col.gameObject.tag == "pbullet" && canTakeDamage)
         {
             health -= playerBullet.damage;
+            bossHealthBar.SetHealth(health);
         }
     }
 
     public void Death()
     {
-
+        health = 0;
+        bossHealthBar.SetHealth(health);
         Destroy(gameObject);
     }
 
@@ -42,6 +44,7 @@ public class BossHealth : MonoBehaviour
     void Start()
     {
         maxHealth = health;
+        bossHealthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame

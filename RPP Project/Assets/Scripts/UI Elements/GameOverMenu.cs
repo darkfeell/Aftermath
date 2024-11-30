@@ -8,6 +8,7 @@ public class GameOverMenu : MonoBehaviour
     void Start(){
         GameManager.instance.healthBar.SetActive(false);
         GameManager.instance.ammoTxt.SetActive(false);
+        //GameManager.instance.bossHealthBar.SetActive(false);
     }
     public void LoadMenu()
     {
@@ -24,6 +25,8 @@ public class GameOverMenu : MonoBehaviour
         GameManager.instance.hp.SetupHealth();
         GameManager.instance.healthBar.SetActive(true);
         GameManager.instance.ammoTxt.SetActive(true);
+        
+        
         if (sceneIndex >= 0)
         {
             SceneManager.LoadScene(sceneIndex);
@@ -33,6 +36,7 @@ public class GameOverMenu : MonoBehaviour
             Debug.LogError("Nenhuma fase foi salva.");
             SceneManager.LoadScene(0);
         }
+        
         
         // string lastLevel = PlayerPrefs.GetString("LastLevel");
         //

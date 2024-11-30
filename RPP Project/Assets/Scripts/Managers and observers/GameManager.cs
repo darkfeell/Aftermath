@@ -14,12 +14,13 @@ public class GameManager : MonoBehaviour
     public PlayerHealth hp;
     public PlayerMovement playerMove;
     public PlayerShooting playerShoot;
-    
+    public GameObject bossHealthBar;
 
     public int sceneIndex;
     public TextMeshProUGUI textBoxText;
     public GameObject textBox;
     public GameObject healthBar;
+    
     public GameObject reloadTimerObj;
     public Image reloadTimerImage;
     public TextMeshProUGUI ammoText;
